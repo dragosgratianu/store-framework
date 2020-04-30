@@ -22,9 +22,6 @@
      "filter-navigator.v3",
      "search-fetch-more"
    ]
- },
- "props": {
-   "search-fetch-more": true
  }
 
 }
