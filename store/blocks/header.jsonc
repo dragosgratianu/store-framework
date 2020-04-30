@@ -5,6 +5,7 @@
         "header-layout.mobile"
       ]
     },
+
     "header.full": {
       "blocks": [
         "header-layout.desktop",
@@ -24,14 +25,197 @@
         "children": [ 
             "header-spacer", 
             "vtex.menu@2.x:menu#categories",
-            "vtex.menu@2.x:submenu#major", 
+            "vtex.menu@2.x:submenu#major",
+            "vtex.menu@2.x:submenu#small",
+            "vtex.menu@2.x:submenu#electronics", 
             "header-spacer" 
             ] 
     },
 
-    "vtex.menu@2.x:submenu#major":{ "children":[ 
+    "vtex.menu@2.x:submenu#electronics":{ 
+        "children":[ 
+        "vtex.menu@2.x:menu#electronics"
+        ] 
+    },
+
+    "vtex.menu@2.x:submenu#major":{ 
+        "children":[ 
         "vtex.menu@2.x:menu#major"
         ] 
+    },
+
+    "vtex.menu@2.x:submenu#small":{ 
+        "children":[ 
+        "vtex.menu@2.x:menu#small"
+        ]
+    },
+
+    "vtex.menu@2.x:menu#electronics": {
+        "children":[
+        "menu-item#cameras", 
+        "menu-item#laptops", 
+        "menu-item#tvs"
+        ], 
+        "props":{ 
+        "orientation": "vertical" 
+        } 
+    },
+
+    "vtex.menu@2.x:menu#major": {
+        "children":[
+        "menu-item#refrigerators", 
+        "menu-item#ovens", 
+        "menu-item#washers"
+        ], 
+        "props":{ 
+        "orientation": "vertical" 
+        } 
+    },
+
+    "vtex.menu@2.x:menu#small": {
+        "children":[
+        "menu-item#mixers", 
+        "menu-item#toasters", 
+        "menu-item#coffe"
+        ], 
+        "props":{ 
+        "orientation": "vertical" 
+        } 
+    },
+
+    "menu-item#cameras": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Cameras",
+            "text": "Cameras"
+          }
+        }
+    },
+
+    "menu-item#laptops": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Laptops",
+            "text": "Laptops"
+          }
+        }
+    },
+
+    "menu-item#tvs": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Tvs",
+            "text": "Tvs"
+          }
+        }
+    },
+
+    "menu-item#refrigerators": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Refrigerators",
+            "text": "Refrigerators"
+          }
+        }
+    },
+
+    "menu-item#ovens": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Ovens",
+            "text": "Ovens"
+          }
+        }
+    },
+
+    "menu-item#washers": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Washers",
+            "text": "Washers"
+          }
+        }
+    },
+
+    "menu-item#mixers": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Mixers",
+            "text": "Mixers"
+          }
+        }
+    },
+
+    "menu-item#toasters": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Toasters",
+            "text": "Toasters"
+          }
+        }
+    },
+
+    "menu-item#coffe": {
+        "props": {
+          "id": "menu-item-electronics",
+          "type": "custom",
+          "highlight": false,
+          "itemProps": {
+            "type": "internal",
+            "href": "#",
+            "noFollow": false,
+            "tagTitle": "Coffe",
+            "text": "Coffe"
+          }
+        }
     },
 
     "vtex.menu@2.x:menu#categories": { 
