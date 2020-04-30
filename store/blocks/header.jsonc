@@ -25,11 +25,37 @@
         "children": [ 
             "header-spacer", 
             "vtex.menu@2.x:menu#categories",
-            "vtex.menu@2.x:submenu#major",
-            "vtex.menu@2.x:submenu#small",
-            "vtex.menu@2.x:submenu#electronics", 
             "header-spacer" 
             ] 
+    },
+
+    "vtex.menu@2.x:menu#categories": { 
+        "children": [ 
+            "menu-item#major-appliances", 
+            "menu-item#small-appliances", 
+            "menu-item#electronics"
+            ], 
+            "props":{ 
+            "orientation": "horizontal" 
+        } 
+    },
+
+    "menu-item#electronics": {
+        "children": [
+            "vtex.menu@2.x:submenu#electronics"
+        ]
+    },
+
+    "menu-item#small-appliances": {
+        "children": [
+            "vtex.menu@2.x:submenu#small"
+        ]
+    },
+
+    "menu-item#major-appliances": {
+        "children": [
+            "vtex.menu@2.x:submenu#major"
+        ]
     },
 
     "vtex.menu@2.x:submenu#electronics":{ 
@@ -115,7 +141,7 @@
 
     "menu-item#tvs": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-tvs",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -130,7 +156,7 @@
 
     "menu-item#refrigerators": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-refrigerators",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -145,7 +171,7 @@
 
     "menu-item#ovens": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-ovens",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -160,7 +186,7 @@
 
     "menu-item#washers": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-washers",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -175,7 +201,7 @@
 
     "menu-item#mixers": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-mixers",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -190,7 +216,7 @@
 
     "menu-item#toasters": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-toasters",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -205,7 +231,7 @@
 
     "menu-item#coffe": {
         "props": {
-          "id": "menu-item-electronics",
+          "id": "menu-item-coffe",
           "type": "custom",
           "highlight": false,
           "itemProps": {
@@ -218,17 +244,6 @@
         }
     },
 
-    "vtex.menu@2.x:menu#categories": { 
-        "children": [ 
-            "menu-item#major-appliances", 
-            "menu-item#small-appliances", 
-            "menu-item#electronics"
-            ], 
-            "props":{ 
-            "orientation": "horizontal" 
-        } 
-    },
-  
     "header-layout.mobile": {
       "children": [
         "header-row#notification",
