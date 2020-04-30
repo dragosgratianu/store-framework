@@ -1,13 +1,14 @@
 {
   "store.search": {
-    "blocks": ["search-result-layout","search-fetch-more"]
+    "blocks": ["search-result-layout"]
   },
 
   "search-result-layout": {
     "blocks": [
        "search-result-layout.desktop",
        "search-result-layout.mobile",
-       "search-not-found-layout"
+       "search-not-found-layout",
+       "search-fetch-more"
     ]
  },
 
@@ -19,7 +20,7 @@
      "order-by.v2",
      "search-fetch-previous",
      "search-content",
-     "filter-navigator.v3",
+     "filter-navigator.v3"
    ]
  }
 
