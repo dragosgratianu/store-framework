@@ -21,7 +21,11 @@
      "search-content",
      "filter-navigator.v3",
      "search-fetch-more"
-   ]
+   ],
+   "props":{
+    "preventRouteChange":true,
+    "pagination":"show-more"
+  }
  }
 
 }
