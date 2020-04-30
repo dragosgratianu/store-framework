@@ -16,7 +16,7 @@
             "querySchema": {
                 "hideUnavailableItems": true,
                 "maxItemsPerPage": 8,
-                "orderByField": "OrderByReleaseDateDESC",
+                "orderByField": "OrderByReleaseDateDESC"
               } 
         }
     }
