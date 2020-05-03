@@ -258,10 +258,6 @@
             }
         },
 
-
-
-
-   
     "header-layout.mobile": {
       "children": [
         "header-row#notification",
@@ -295,8 +291,10 @@
       },
     
       "header-row#main-mobile": {
+        "blocks":[
+          "drawer"
+        ],
         "children": [
-          "drawer",
           "logo",
           "header-spacer",
           "minicart",
