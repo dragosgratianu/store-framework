@@ -1,338 +1,94 @@
 {
-    "header": {
-      "blocks": [
-        "header-layout.desktop",
-        "header-layout.mobile"
-      ]
-    },
+  "header": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
+  "header.full": {
+    "blocks": [
+      "header-layout.desktop",
+      "header-layout.mobile"
+    ]
+  },
 
-    "header.full": {
-      "blocks": [
-        "header-layout.desktop",
-        "header-layout.mobile"
-      ]
-    },
-  
-    "header-layout.desktop": {
-      "children": [
-        "header-row#notification",
-        "header-row#main",
-        "header-row#menu"
-      ]
-    },
-
-    "header-row#menu": { 
-        "children": [ 
-            "header-spacer", 
-            "vtex.menu@2.x:menu#categories",
-            "header-spacer" 
-            ] 
-    },
-
-    "vtex.menu@2.x:menu#categories": { 
-        "children": [ 
-            "menu-item#major-appliances", 
-            "menu-item#small-appliances", 
-            "menu-item#electronics"
-            ], 
-            "props":{ 
-            "orientation": "horizontal" 
-        } 
-    },
-    "vtex.menu@2.x:submenu#small":{ 
-        "children":[ 
-            "vtex.menu@2.x:menu#small" 
-            ]
-        },
-    "vtex.menu@2.x:submenu#electronics":{ 
-        "children":[ 
-            "vtex.menu@2.x:menu#electronics" 
-            ]
-        },
-    "vtex.menu@2.x:menu#electronics":{
-        "children": [ 
-            "menu-item#cameras", 
-            "menu-item#laptops", 
-            "menu-item#tvs" 
-            ], 
-        "props":{ 
-            "orientation": "vertical" 
-        } 
-    },
-
-    "vtex.menu@2.x:menu#major":{
-        "children": [ 
-            "menu-item#refrigerators", 
-            "menu-item#ovens", 
-            "menu-item#washers"
-        ], 
-        "props":{ 
-            "orientation": "vertical" 
-        } 
-    },
-
-    "vtex.menu@2.x:menu#small":{
-        "children": [ 
-            "menu-item#mixers", 
-            "menu-item#toasters", 
-            "menu-item#coffee" 
-            ], 
-        "props":{ 
-            "orientation": "vertical" 
-        } 
-    },
-
-    "menu-item#major-appliances": {
-        "props": {
-        "type": "custom",
-        "highlight": true,
-        "itemProps": {
-          "text": "Major Aplliances"
-        }
-      },
-      "blocks":[
-        "vtex.menu@2.x:submenu#major"
-      ]
-      
-    },
-    "menu-item#small-appliances": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 2, 
-          "text": "Small Appliances"
-        }
-      },
-      "blocks":[
-        "vtex.menu@2.x:submenu#small"
-      ]
-    },
-    "menu-item#electronics": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 3, 
-          "text": "Electronics"
-        }
-      },
-      "blocks":[
-        "vtex.menu@2.x:submenu#electronics"
-      ]
-    },
-    "menu-item#refrigerators": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 4, 
-          "text": "Refrigerators"
-        }
-      }
-    },
-    "menu-item#ovens": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 5, 
-          "text": "Ranges & Ovens"
-        }
-      }
-    },
-    "menu-item#washers": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 6, 
-          "text": "Washers & Dryers"
-        }
-      }
-    },
-    "menu-item#mixers": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 7, 
-          "text": "Mixers & Blenders"
-        }
-      }
-    },
-    "menu-item#toasters": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 8, 
-          "text": "Toasters & Grills"
-        }
-      }
-    },
-    "menu-item#coffee": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 9, 
-          "text": "Coffee Makers"
-        }
-      }
-    },
-    "menu-item#tvs": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 10, 
-          "text": "TVs"
-        }
-      }
-    },
-    "menu-item#laptops": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 11, 
-          "text": "Laptops"
-        }
-      }
-    },
-    "menu-item#cameras": {
-        "props":
-      {
-        "type": "category",
-        "highlight": true,
-        "itemProps": {
-          "categoryId": 12, 
-          "text": "Cameras"
-        }
-      }
-    },
-
-    "vtex.menu@2.x:submenu#major":{ 
-        "children":["flex-layout.row#major"]
-        },
-        "flex-layout.row#major": {
-            "children": [
-              "flex-layout.col#menu",
-              "flex-layout.col#img"
-            ]
-          },
-          "flex-layout.col#menu":{
-              "children":[
-                  "vtex.menu@2.x:menu#major"
-              ]
-          },
-          "flex-layout.col#img":{
-              "children":[
-                  "image#menu",
-                  "rich-text#header"
-              ],
-              "props":{
-                "paddingRight": 4,
-                "horizontalAlign": "right"
-              }
-          },
-          "image#menu": {
-            "props": {
-              "src": "https://appliancetheme.vteximg.com.br/arquivos/menu-washer.jpg",
-              "link": {
-                "url": "/small-appliances/coffee-makers"
-              },
-              "alt": "Coffee Makers Collection",
-              "maxWidth": "200px"
-            }
-        },
-
-    "header-layout.mobile": {
-      "children": [
-        "header-row#notification",
-        "header-row#main-mobile",
-        "header-row#search"
-      ]
-    },
-
-    "header-row#notification": {
-        "children": [
-          "header-spacer",
-          "rich-text#header",
-          "header-spacer"
-        ]
-      },
-
-      "header-row#main": {
-        "children": [
+  "header-layout.desktop": {
+    "children": [
+      "header-row#notification",
+      "header-row#main",
+      "header-row#menu"
+    ]
+  },
+  "header-row#menu": { "children": [ "header-spacer", "vtex.menu@2.x:menu#categories", "header-spacer"] },
+  "header-row#main":{
+      "children":[
           "logo",
           "header-spacer",
           "search-bar",
           "minicart",
           "login"
-        ],
-      
-        "props": {
-          "sticky": true,
+      ],
+      "props":{
           "inverted":true,
-          "fullWidth": false
-        }
-      },
-    
-      "header-row#main-mobile": {
-        "blocks":[
-          "drawer"
-        ],
-        "children": [
-          "logo",
-          "header-spacer",
-          "minicart",
-          "login"
-        ],
-      
-        "props": {
-          "sticky": true,
-          "inverted":true
-        }
-      },
-
-      "header-row#search": {
-        "children": [
-          "search-bar"
-        ],
-        "props": {
-          "sticky": true
-        }
-      },
-
-      "login":{
-        "props": {
-          "showIconProfile": true,
-          "iconLabel": "Login"
-        }
-      },
-      
-      "logo":{
-        "props": {
-          "url": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/flatflat___6081e50402943bcb11bc45a8e613aa72.png"
-        }
-      },
-
-      "rich-text#header": {
-        "props": {
-          "text": "**Free Shipping on orders over $50**",
-          "textPosition": "CENTER"
-        }
+          "sticky":true,
+          "fullWidth":false
       }
+  },
+
+  "header-layout.mobile": {
+    "children": [
+      "header-row#notification",
+      "header-row#main-mobile",
+      "header-row#search"
+    ]
+  },
+  "header-row#notification": {
+      "children": [
+        "header-spacer",
+        "rich-text#header",
+        "header-spacer"
+      ]
+    },
+    "header-row#main-mobile": {
+      "children": [
+        "drawer",
+        "logo",
+        "header-spacer",
+        "minicart",
+        "login"
+      ],
+    
+      "props": {
+        "sticky": true,
+        "inverted":true
+      }
+    },
+    
+    "header-row#search": {
+      "children": [
+        "search-bar"
+      ],
+      "props": {
+        "sticky": true
+      }
+    },
+    
+    "login":{
+      "props": {
+        "showIconProfile": true,
+        "iconLabel": "Login"
+      }
+    },
+    
+    "logo":{
+      "props": {
+        "url": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/flatflat___6081e50402943bcb11bc45a8e613aa72.png"
+      }
+    },
+    "rich-text#header": {
+      "props": {
+        "text": "**Free Shipping on orders over $50**",
+        "textPosition": "CENTER"
+      }
+    }
 }
